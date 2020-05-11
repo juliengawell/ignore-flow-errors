@@ -73,6 +73,7 @@ def remove_duplicate_errors(errors_grouped_by_file):
 
 
 def remove_duplicates_from_list(list_with_duplicates):
+    #The list is converted into a dictionary which has only unique keys then it is converted back into a list.
     error_list_without_duplicates = list(dict.fromkeys(list_with_duplicates))
 
     return error_list_without_duplicates
