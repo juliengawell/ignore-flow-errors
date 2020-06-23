@@ -21,19 +21,19 @@ First of all, Flow must be installed in our repository.
 
 The easiest way to install it is via npm:
 
-  npm install --save-dev flow-bin
+    npm install --save-dev flow-bin
 
 The most efficient way to use Flow is to use the Flow server which will check the file incrementally, which means that it only checks the part that has changed.
 
 The Flow server can be started by running on the terminal the command:
 
-  npm run flow
+    npm run flow
 
 which will display maximum 50 errors and the total number of errors detected.
 
 The Flow server can be stopped by running on the terminal the command:
 
-  npm run flow stop
+    npm run flow stop
 
 
 ## Issue we need to solve
