@@ -38,19 +38,19 @@ The Flow server can be stopped by running on the terminal the command:
 
 ## Issue we need to solve
 
-There are too many issues to resolve initially. If we run the command flow in our repository and the output shows 1000+ errors it would be almost impossible to fix all flow errors at once. It would be possible to fix them manually one by one using the $FlowFixMe comment which will ignore the flow error on the following line but it can be very time consuming. Moreover, it would be necessary to correct all the errors manually all at once after adding or modifying the code base.
+There are too many issues to resolve initially. If we run the command flow in our repository and the output shows 1000+ errors it would be almost impossible to fix all flow errors at once. It would be possible to fix them manually one by one using the ``$FlowFixMe`` comment which will ignore the flow error on the following line but it can be very time consuming. Moreover, it would be necessary to correct all the errors manually all at once after adding or modifying the code base.
 
 
 ## Solution
 
-Create a Python script to store the output of the flow --json command in a .json file, group errors by file and add automatically the comment $FlowFixMe to the line before the one with an error.
+Create a Python script to store the output of the flow ``--json`` command in a .json file, group errors by file and add automatically the comment ``$FlowFixMe`` to the line before the one with an error.
 
 
 ## Implementation
 
 This script is separated into three steps. 
 
-In the third for each error in the file we add the comment $FlowFixMe to the line before the one containing an error. We also create a counter that we will increment for each error in the file. If we don't do this, when we add a comment to the file, the line with the next error will be on the next line and so the comment will be 2 lines above it and so forth.
+In the third for each error in the file we add the comment ``$FlowFixMe`` to the line before the one containing an error. We also create a counter that we will increment for each error in the file. If we don't do this, when we add a comment to the file, the line with the next error will be on the next line and so the comment will be 2 lines above it and so forth.
 (i.e if there is an error on lines 5 and 10 and a comment is added on line 4 to ignore the error on line 5, the error on line 10 is now on line 11 and the comment to ignore this error will be on line 9)
 
 
