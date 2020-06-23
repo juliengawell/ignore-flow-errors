@@ -48,9 +48,9 @@ Create a Python script to store the output of the flow ``--json`` command in a .
 
 ## Implementation
 
-This script is separated into three steps. 
+This [script](https://github.com/juliengawell/ignore-flow-errors/blob/master/ignore_flow_errors.py) is separated into three steps. 
 
-In the third for each error in the file we add the comment ``$FlowFixMe`` to the line before the one containing an error. We also create a counter that we will increment for each error in the file. If we don't do this, when we add a comment to the file, the line with the next error will be on the next line and so the comment will be 2 lines above it and so forth.
+In the [third](https://github.com/juliengawell/ignore-flow-errors/blob/master/ignore_flow_errors.py/#L81) for each error in the file we add the comment ``$FlowFixMe`` to the line before the one containing an error. We also create a counter that we will increment for each error in the file. If we don't do this, when we add a comment to the file, the line with the next error will be on the next line and so the comment will be 2 lines above it and so forth.
 (i.e if there is an error on lines 5 and 10 and a comment is added on line 4 to ignore the error on line 5, the error on line 10 is now on line 11 and the comment to ignore this error will be on line 9)
 
 
