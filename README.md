@@ -3,11 +3,11 @@
 ## What’s this document about ?
 
 This document talks about:
-A short introduction to Flow
-Flow installation
-The issue we need to solve
-The solution used and its implementation
-What could be done further
+1. A short introduction to Flow
+2. Flow installation
+3. The issue we need to solve
+4. The solution used and its implementation
+5. What could be done further
 
 
 ## Introduction
@@ -21,19 +21,19 @@ First of all, Flow must be installed in our repository.
 
 The easiest way to install it is via npm:
 
-npm install --save-dev flow-bin
+  npm install --save-dev flow-bin
 
 The most efficient way to use Flow is to use the Flow server which will check the file incrementally, which means that it only checks the part that has changed.
 
 The Flow server can be started by running on the terminal the command:
 
-npm run flow
+  npm run flow
 
 which will display maximum 50 errors and the total number of errors detected.
 
 The Flow server can be stopped by running on the terminal the command:
 
-npm run flow stop
+  npm run flow stop
 
 
 ## Issue we need to solve
